@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-body">
+        <select [(ngModel)]="customer">
+            <option [ngValue]="null">Brak klienta</option>
+            <option *ngFor="let c of customers" [ngValue]="c">{{c.name}}</option>
+        </select>
+        <button class="btn btn-secondary" style="margin-left: 10px" (click)="changeColor()">Zmień kolor</button>
+        <button class="btn btn-secondary" style="margin-left: 10px" (click)="deleteCustomer()">Usuń klienta</button>
+    </div>
+</div>
+
+<div *ngIf="customer">
+    <cus-customer-details #details [customer]="customer" (shift)="onShift($event)"></cus-customer-details>
+</div>

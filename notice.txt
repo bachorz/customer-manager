@@ -1,0 +1,3 @@
+tymczasowe api backendowe odpalamy z C:\my_projects\api za pomocą ->node api.js
+
+url do backendu -> http://localhost:13378/customers
